@@ -1,0 +1,35 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-brand {
+	font-size: 40px;
+}
+
+.navbar-inverse {
+	border-radius: 0px;
+}
+
+a {
+	transition: 0.5s;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.white-space {
+	font-size: 150px;
+	color: #D6D6D6;
+}
+
+.white-space:hover a {
+	color: green;
+}
+.panel-heading{
+	min-height: 50px;
+}
+.new-item-header{
+	margin-top: 9px;
+}
+
