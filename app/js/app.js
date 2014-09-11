@@ -29,6 +29,7 @@ $(document).ready(function() {
 			console.log(newListArray);
 			$('#newList').append('<li class="list-group-item" id="item">' + newObj.body + '<a href="#start" class="pull-right" id="startTask">Start &#x2192;</a></li>')
 			$('#newItemInput').val('');
+			$('#newTaskForm,  #newListItem').fadeToggle('fast', 'linear');			
 		}
 	});
 
@@ -36,18 +37,10 @@ $(document).ready(function() {
 
 	});
 
-	// $('#newTaskForm').keypress(function(e) {
-	// 	e.preventDefault();
-	// 	var newItem = $('#newItemInput').val();		
-
-		
-	// });	
-
 	$('#startTask').click(function(e){
 		debugger;
 		e.preventDefault();
-
-
+		inProgressArray.push(e)
 	});
 
 
