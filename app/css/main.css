@@ -33,3 +33,27 @@ a:hover {
 	margin-top: 9px;
 }
 
+.list-group-item {
+	color: #424242;
+}
+
+.arrow {
+	margin-top: -20px;
+	font-size: 40px;
+	margin-right: 100px;
+	transition: 0.5s;
+}
+
+.pencil {
+	font-size:50px; 
+	margin-top:-30px;
+	transition: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.archived {
+	background: red;
+}
