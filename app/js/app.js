@@ -69,7 +69,7 @@ $(document).on('click', '#archived', function (e) {
 $('.container').bind('DOMSubtreeModified', function (e) {
     if (e.target.innerHTML.length > 0) {
     	$(".list-group-item").mouseenter(function(){
-		$(this).find('.arrow').animate({ marginRight: '0px'}, 100)
+		$(this).find('.arrow').animate({ marginRight: '0px'}, 0)
 			}).mouseleave(function(){
 				$(this).find('.arrow').stop().css('marginRight', '100px')
 			}).click(function(){
