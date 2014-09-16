@@ -12,6 +12,53 @@ $(document).on('ready', function() {
 		this.symbol = '&#10148;';
 	};
 
+	var newListMarkup = '<div class="">'+
+						   		'<section class="col-md-4">'+
+						   			'<div class="panel panel-danger ">'+
+						   				'<div class="panel-heading">'+
+						   					'<form class="form-group" id="newTaskForm" style="margin-top:">'+
+						   						'<div class="input-group" style="margin-bottom:-40px;">'+
+						   							'<div class="input-group-addon" id="saveNewItem">'+
+						   								'<a href="">Save</a>'+
+						   							'</div>'+
+						   						'<div class="input-group-addon" id="cancel">'+
+						   							'<a href="">Cancel</a>'+
+						   						'</div>'+
+						   						'<input class="form-control" type="text" id="newItemInput" placeholder="New Item">'+
+						   						'</div>'+
+						   					'</form>'+
+						   					'<div class="new-item-header">'+
+						   						'<span id="newHeading">New</span>'+
+						   						'<a href="#newItem" class="pull-right pencil" id="newListItem" style="">&#9783;</a>'+
+						   					'</div>'+
+						   				'</div>'+
+						   				'<div class="panel-body">'+
+						   					'<ul class="list-group" id="newList">'+
+						   					'</ul>'+
+						   				'</div>'+
+						   			'</div>'+
+						   		'</section>'+
+						   		'<section class="col-md-4">'+
+						   			'<div class="panel panel-warning ">'+
+						   				'<div class="panel-heading"> In Progress '+
+						   				'</div>'+
+					   					'<div class="panel-body" >'+
+					   						'<ul class="list-group" id="currentList">'+
+					   						'</ul>'+
+					   					'</div>'+
+						   			'</div>'+
+						   		'</section>'+
+						   		'<section class="col-md-4">'+
+						   			'<div class="panel panel-success ">'+
+						   				'<div class="panel-heading"> Archived'+
+						   				'</div>'+
+						   				'<div class="panel-body">'+
+						   					'<ul class="list-group" id="archivedList">'+
+						   					'</ul>'+
+						   				'</div>'+
+						   			'</div>'+
+						   		'</section>'+
+						   	'</div>'
 
 	$('#newListItem').on('click',function() {
 		$('#newTaskForm,  #newListItem').fadeToggle('fast', 'linear');
@@ -78,6 +125,11 @@ $('.container').bind('DOMSubtreeModified', function (e) {
     }
 });
 
+
+
+$('#createNewList').on('click', function() {
+	$('.container').append(newListMarkup);
+});
 
 
 });	
