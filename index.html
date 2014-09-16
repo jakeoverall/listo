@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Listo!</title>
-	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	
-	<link rel="stylesheet" type="text/css" href="app/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Listo!</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse" role="navigation">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="/" >&#x2603;listo</a>
-	    </div>
-	  </div>
-	</nav>
-	<div class="container">
-		<div class="col-lg-12">
-		<section class="col-md-4">
-			<div class="panel panel-danger ">
-				<div class="panel-heading">
-						<form class="form-group" id="newTaskForm" style="margin-top:">
-							<div class="input-group" style="margin-bottom:-40px;">
-      							<div class="input-group-addon" id="saveNewItem"><a href="">Save</a></div>
-      							<div class="input-group-addon" id="cancel"><a  href="">Cancel</a></div>
-      							<input class="form-control" type="text" id="newItemInput" placeholder="New Item">
-   							</div>					
-   						</form>
-   					<div class='new-item-header'>
-						<span id="newHeading">New</span> 
-						<a href="#newItem" class="pull-right pencil" id="newListItem" style="">&#9998;</a>
-					</div>
-				</div>			
-				<div class="panel-body">
-					<ul class="list-group" id='newList'>
-<!-- 					  <li class="list-group-item">
-					  	Cras justo odio  <a href="#start" class="pull-right" id="startTask">Start &#x2192;</a>
-					  </li> -->
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="col-md-4">
-			<div class="panel panel-warning ">
-				<div class="panel-heading">
-					In Progress
-				</div>			
-				<div class="panel-body" >
-					<ul class="list-group" id="currentList">
-<!-- 					  <a href="#finish" class="" id="finishTask">
-					  	<li class="list-group-item">
-					  		Arrow dat!   <span class="arrow pull-right">&#x2192;</span>
-					  	</li>
-					  </a> -->
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section class="col-md-4">
-			<div class="panel panel-success ">
-				<div class="panel-heading">
-					Archived
-				</div>			
-				<div class="panel-body">
-					<ul class="list-group" id="archivedList">
-					</ul>
-				</div>
-			</div>
-		</section>
-		</div>
-		<div class="col-lg-12">
-		<section class="col-md-4 pull-left">
-			<div class="panel panel-default ">
-				<div class="panel-heading">
-					Create New List
-				</div>			
-				<div class="panel-body">
-					<div class="white-space text-center">
-						<a href="#newList" id="createNewList">&#9997;</a>
-					</div>					
-				</div>
-			</div>
-		</div>
-	</section>
-		</div>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">&#x2603;listo</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="col-lg-12">
+            <section class="col-md-4">
+                <div class="panel panel-danger ">
+                    <div class="panel-heading">
+                        <form class="form-group" id="newTaskForm" style="margin-top:">
+                            <div class="input-group" style="margin-bottom:-40px;">
+                                <div class="input-group-addon" id="saveNewItem"><a href="">Save</a></div>
+                                <div class="input-group-addon" id="cancel"><a href="">Cancel</a></div>
+                                <input class="form-control" type="text" id="newItemInput" placeholder="New Item">
+                            </div>
+                        </form>
+                        <div class='new-item-header'>
+                            <span id="newHeading">New</span>
+                            <a href="#newItem" class="pull-right pencil" id="newListItem" style="">&#9998;</a>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group" id='newList'></ul>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-4">
+                <div class="panel panel-warning ">
+                    <div class="panel-heading">
+                        In Progress
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group" id="currentList"></ul>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-4">
+                <div class="panel panel-success ">
+                    <div class="panel-heading">
+                        Archived
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group" id="archivedList"></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-12">
+            <section class="col-md-4 pull-left">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        Create New List
+                    </div>
+                    <div class="panel-body">
+                        <div class="white-space text-center">
+                            <a href="#newList" id="createNewList">&#9997;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
 
 
 
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="app/js/app.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="app/js/app.js"></script>
 </body>
 </html>
