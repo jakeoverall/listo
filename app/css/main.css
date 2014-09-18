@@ -39,10 +39,13 @@ a:hover {
 }
 
 .arrow {
-	margin-top: -20px;
-	font-size: 40px;
+	font-size: 20px;
 	margin-right: 20px;
 	transition: 0.5s;
+}
+
+.arrow:hover {
+    color: red;
 }
 
 .pencil {
@@ -57,4 +60,12 @@ a:hover {
 
 .archived {
 	background: red;
+}
+
+.destroy-task {
+    font-size: 20px;
+}
+
+.destroy-task:hover {
+    color: red;
 }
