@@ -13,7 +13,6 @@ $(document).on('ready', function () {
         this.id = 'new';
     };
 
-
     var addTask = function (task) {
         if (task) {
             // Uses the Task Constructor function to make a task object
@@ -21,7 +20,7 @@ $(document).on('ready', function () {
             // This adds the item to local storage by pushing it to the array
             listo.push(task);
             save();
-
+            
             //----------- JQuery functions --------------
 
             //resets the form
@@ -33,8 +32,6 @@ $(document).on('ready', function () {
         }
     };
     
-
-
     //----------------- JQuery functions -------------------------
     //Hides form on page load
     $('#newTaskForm').hide();
@@ -62,7 +59,6 @@ $(document).on('ready', function () {
     	}
     });
 
-
     //moves tasks to the inProgress list
     $(document).on('click', '#item', function (e) {
         e.preventDefault();
@@ -89,7 +85,6 @@ $(document).on('ready', function () {
         advanceTask(task);
     });
     
-
     //--------------- Local Storage ----------------------
 
     /* Gets the array listo stored on local storage and
@@ -137,7 +132,6 @@ populates each list according to task id */
     var save = function () {
         localStorage["listo"] = JSON.stringify(listo);
     };
-
 
     //JQuery watcher 
     $('.container').bind('DOMSubtreeModified', function (e) {

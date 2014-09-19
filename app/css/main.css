@@ -69,3 +69,7 @@ a:hover {
 .destroy-task:hover {
     color: red;
 }
+
+.hidden {
+    display: none;
+}
