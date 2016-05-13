@@ -11,6 +11,7 @@ $(document).on('ready', function () {
     var Task = function (task) {
         this.task = task;
         this.id = 'new';
+        this.timestamps = { created: Date.now() }
     };
 
     var addTask = function (task) {
@@ -116,8 +117,10 @@ populates each list according to task id */
             if (listo[i].task === modified) {
                 if (listo[i].id === 'new') {
                     listo[i].id = 'inProgress';
+                    listo[i].timestamps.started = Date.now();
                 } else if (listo[i].id === 'inProgress') {
                     listo[i].id = 'archived';
+                    listo[i].timestamps.finished = Date.now();
                 } else {
                     listo.splice(i, 1);
                 }
