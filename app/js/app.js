@@ -11,7 +11,7 @@ $(document).on('ready', function () {
     var Task = function (task) {
         this.task = task;
         this.id = 'new';
-        this.timestamps = { created: moment() }
+        this.timestamps = { created: moment().format('LTS') }
     };
 
     var addTask = function (task) {
@@ -29,7 +29,7 @@ $(document).on('ready', function () {
             $('#newTaskForm,  #newListItem').fadeToggle('fast', 'linear');
 
             //append the new task to the new list
-            $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + task.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></span><p class="text-muted"><small>'+task.timestamps.created+'</small></p></li></a>');
+            $('#newList').append('<a href="#finish" class="" id="item"><li class="list-group-item">' + task.task + '<span class="arrow pull-right"><i class="glyphicon glyphicon-arrow-right"></i></span><p class="text-muted"><small>'+task.timestamps.created+'</small></p></li></a>');
         }
     };
     
@@ -117,10 +117,10 @@ populates each list according to task id */
             if (listo[i].task === modified) {
                 if (listo[i].id === 'new') {
                     listo[i].id = 'inProgress';
-                    listo[i].timestamps.started = moment();
+                    listo[i].timestamps.started = moment().format('LTS');
                 } else if (listo[i].id === 'inProgress') {
                     listo[i].id = 'archived';
-                    listo[i].timestamps.finished = moment();
+                    listo[i].timestamps.finished = moment().format('LTS');
                 } else {
                     listo.splice(i, 1);
                 }
